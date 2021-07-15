@@ -2,21 +2,7 @@
 
 $(document).ready(function () {
 
-    // Este script faz o efeito de scroll pelo site de forma mais bonita *--*, o modo de uso é simples, você coloca em um link #.... e a seção que você deseja que este link leve na MESMA página e ele irá fazer o efeito de scroll
 
-    var windowHeight = $(window).height(); $("").css("min-height", windowHeight); $('a[href*=\\#]:not([href=\\#])').on('click', function () {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash); target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                var walkPixels = target.offset().top; $
-
-                    ('html,body').animate({
-                        scrollTop: walkPixels
-                    }, 2000);
-                return false;
-            }
-        }
-    });
     if ($('.menu-responsive').lenght > 0) {
         setMaxHeight($('.menu-responsive'));
     }
@@ -44,7 +30,7 @@ $(document).ready(function () {
 
     // Este é o código do "Owl-carousel"
 
-    $('.owl-agenda').owlCarousel({
+    $('.owl-depoimento').owlCarousel({
         loop: true,
         margin: 98,
         nav: true,
@@ -56,12 +42,12 @@ $(document).ready(function () {
                 items: 1,
             },
             600: {
-                items: 2,
+                items: 1,
             },
             1024: {
                 mouseDrag: false,
                 touchDrag: true,
-                items: 3,
+                items: 2,
             }
         }
     });
